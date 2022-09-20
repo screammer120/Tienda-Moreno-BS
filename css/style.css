@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    top: 0px;
+    animation-name: BColorChange;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-duration: 10s;
+
+}
+
+main {
+    height: 50em;
+    background-image: url("../assets/images/fondeto.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: 'catalishHuntera';
+    src: url('../assets/fonts/catalishHuntera.ttf');
+}
+
+.text-center{
+    overflow-y: hidden ;
+}
+
+.pt-1 {
+    padding-top: 1 !important;
+    padding-bottom: 1.5 !important;
+}
+
+
+.contenido_principal__izq {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, !important;
+    text-align: justify !important;
+    
+}
+
+.contenido_principal__der {
+    font-family: 'catalishHuntera' !important;
+}
+
+.logo {
+    width: 180px;
+    height: 180px;
+    padding: 1em;
+}
+
+
+/* estilos de footer */
+.social {
+    height: 1em;
+}
+
+/* ANIMACIONES */
+@keyframes BColorChange {
+    0% {
+        background: rgb(169, 169, 247);
+    }
+
+    33.3333% {
+        background: rgb(240, 135, 135);
+    }
+
+    66.6666% {
+        background-color: aqua;
+    }
+
+    100% {
+        background-color: beige;
+
+    }
+}
