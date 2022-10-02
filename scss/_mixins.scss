@@ -1,0 +1,116 @@
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  }
+
+//Responsive
+@mixin device ($device) {
+  $device: $device;
+  body {
+    @if $device == desktop {
+        body {
+            grid-template-columns: 1fr;
+            grid-template-rows: 100px repeat(3, 2fr) 1fr;
+            grid-template-areas:
+              "header"
+              "main"
+              "main"
+              "main"
+              "footer";
+          }
+          .nav-list-link {
+            font-size: 1.5rem;
+          }
+          .img-fondo {
+            min-height: 500px;
+          }
+        
+          .formulario-contacto {
+            font-size: 1.3rem;
+          }
+        
+          .container-redes {
+            display: none;
+            .redes-link {
+              display: none;
+            }
+          }
+        
+          .redes-link {
+            padding: 5px;
+          }
+        
+          .container,
+          .acercade,
+          .cuerpo-productos,
+          .portfolio {
+            padding: 0;
+          }
+          .pie {
+            text-align: center;
+          }
+
+    } @else if $device == tablet {
+        .nav {
+            display: none;
+          }
+          .desplegable-menu {
+            display: flex;
+          }
+          .desplegable-list {
+            list-style-type: none;
+            position: fixed;
+          }
+          .desplegable-list li {
+            height: auto;
+          }
+          .nav-desplegable {
+            cursor: pointer;
+          }
+          .desplegable-link {
+            text-decoration: none;
+            font-size: 5rem;
+          }
+          .desplegable-link:hover {
+            color: #9994e4;
+            border-bottom: 1px solid #9994e4;
+          }
+          .desplegable-link:focus {
+            color: #9994e4;
+            border-bottom: 1px solid #9994e4;
+          }
+        
+          .desplegable-input:checked + .desplegable-list {
+            display: block;
+            position: fixed;
+            top: 120px;
+            z-index: 1;
+            background-color: #ffffffe8;
+            width: 100%;
+            height: 100%;
+          }
+          .container-redes {
+            display: flex;
+            align-items: flex-end;
+            position: fixed;
+            top: 60%;
+            right: 10px;
+            z-index: 1;
+          }
+          .redes-link {
+            background-color: rgba(255, 255, 255, 0.3);
+            width: 35px;
+          }
+    } @else if $device == mobile {
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1rem;
+      }
+      .desplegable-link {
+        font-size: 4rem;
+      }
+    }
+  }
+}

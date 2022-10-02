@@ -1,0 +1,19 @@
+ 
+@keyframes BColorChange {
+  0% {
+      background: rgb(169, 169, 247);
+  }
+
+  33.3333% {
+      background: rgb(240, 135, 135);
+  }
+
+  66.6666% {
+      background-color: aqua;
+  }
+
+  100% {
+      background-color: beige;
+
+  }
+}
